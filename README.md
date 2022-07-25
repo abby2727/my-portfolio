@@ -1,2 +1,3 @@
 # my-portfolio
-Encapsulate my passion, skills, and showcases my personal projects.
+<!-- My personal portfolio which encapsulate my passion, skills, and showcases my personal projects. -->
+A repository for my personal portfolio.
