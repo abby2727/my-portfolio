@@ -64,6 +64,14 @@
     color: #dc143c;
 }
 
+/* Menu button styling */
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
 /* Home section styling */
 
 .home {
@@ -102,4 +110,48 @@
     font-size: 27px;
     margin: 5px 0;
     color: #b1bec8;
+}
+
+/* Responsive media query */
+
+@media (max-width: 947px) {
+    .max-width {
+        padding: 0 50px;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: #010812;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    /* If the 'active' will trigger-display menu */
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
 }
