@@ -1,0 +1,59 @@
+/* Google Fonts (Poppins && Ubuntu) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Like a 'container' in bootstrap */
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* Navbar styling */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: crimson;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 15px 0;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 25px;
+    margin-left: 25px;
+}
+
+/* Home section styling */
+
+.home {
+    display: flex;
+    background: url("src/img/banner.jpg");
+    /* background: #000; */
+    height: 100vh;
+}
