@@ -1,0 +1,770 @@
+/* Google fonts (Poppins && Ubuntu) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+/* Universal styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+section {
+  padding: 90px 0;
+}
+
+.about,
+.skills,
+.teams,
+.contact {
+  font-family: "Poppins", sans-serif;
+}
+
+.about .about-content,
+.skills .skills-content,
+.contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Custom scroll bar */
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Navbar styling */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 30px 0;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+  padding: 15px 0;
+  background: #010812;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar .logo a span {
+  color: crimson;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+  color: #fff;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: crimson;
+}
+
+.navbar.sticky .menu li a:hover {
+  color: #fff;
+}
+
+/* Menu button styling */
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: crimson;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scroll-up-btn:hover {
+  filter: brightness(90%);
+}
+
+/* Home section styling */
+
+.home {
+  display: flex;
+  background: #0a192f;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.home .max-width {
+  width: 100%;
+  display: flex;
+}
+
+.home .home-content .text-1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.home .home-content .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  color: #00d9db;
+  line-height: 1.0;
+}
+
+.home .home-content .text-3 {
+  font-size: 27px;
+  color: #b1bec8;
+  width: 750px;
+  margin-top: 10px;
+}
+
+.home .home-content .text-3 a {
+  font-size: 27px;
+  color: crimson;
+  padding: 0;
+}
+
+.home .home-content .resume a {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+
+.home .home-content .resume a:hover {
+  color: crimson;
+  background: none;
+}
+
+/* About section styling */
+
+.about .about-content .left {
+  width: 45%;
+}
+
+.about .about-content .left img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 2px 2px 10px #a5a1a1;
+}
+
+.about .about-content .right {
+  width: 55%;
+}
+
+.about .about-content .right .text {
+  font-size: 27px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.about .about-content .right .text span {
+  color: crimson;
+}
+
+.about .about-content .right p {
+  text-align: justify;
+  font-size: 17px;
+}
+
+.about .about-content .right a {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover {
+  color: crimson;
+  background: none;
+}
+
+/* Skills section styling */
+
+.skills {
+  background: #0a192f;
+  color: #fff
+}
+
+.skills .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.skills p {
+  text-align: center;
+  font-size: 23px;
+  margin: 5px 0;
+  color: #b1bec8;
+  margin-bottom: 40px;
+}
+
+.skill-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skill-content .card .box {
+  display: flex;
+  margin-left: 25px;
+}
+
+.skill-content .card .box i {
+  font-size: 28px;
+  color: #00d9db;
+}
+
+.skill-content .card .box span {
+  color: #b1bec8;
+}
+
+.skill-content .card .box {
+  display: inline-block;
+  background: none;
+  color: #fff;
+  font-size: 26px;
+  padding: 10px 26px;
+  margin-top: 20px;
+  font-weight: 300;
+  border-radius: 6px;
+  border: 2px solid #00d9db;
+  transition: all 0.3s ease;
+}
+
+.skill-content .card .box:hover {
+  background: #010812;
+}
+
+.skill-content .card .box:hover i {
+  color: #fff;
+}
+
+.skill-content .card .box:hover span {
+  color: #fff;
+}
+
+.skill-content .card .box {
+  transition: all 0.3s ease;
+}
+
+.skill-content .card:hover .box {
+  transform: scale(1.10);
+}
+
+/* Teams section styling */
+
+.teams .carousel .card {
+  background: #222;
+  border-radius: 6px;
+  padding: 25px 35px;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover {
+  background: crimson;
+}
+
+.teams .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover .box {
+  transform: scale(1.05);
+}
+
+.teams .carousel .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+.teams .carousel .card img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid crimson;
+  transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover img {
+  border-color: #fff;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid crimson !important;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+  background: crimson !important;
+}
+
+/* Contact section styling */
+
+.contact {
+  background: #0a192f;
+  color: #fff
+}
+
+.contact .contact-content .column {
+  width: calc(50% - 30px);
+}
+
+.contact .contact-content .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact .contact-content .left p {
+  text-align: justify;
+}
+
+.contact .contact-content .left .icons {
+  margin: 10px 0;
+}
+
+.contact .contact-content .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+
+.contact .contact-content .row .info {
+  margin-left: 30px;
+}
+
+.contact .contact-content .row i {
+  font-size: 28px;
+  color: #00d9db;
+}
+
+.contact .contact-content .info .head {
+  color: #b1bec8;
+  font-weight: 400;
+}
+
+.contact .contact-content .info .sub-title {
+  color: #fff;
+  font-family: 600;
+}
+
+.contact .right form .fields {
+  display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.contact .right form .textarea {
+  height: 80px;
+  width: 100%;
+}
+
+.contact .right form .name {
+  margin-right: 10px;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus {
+  border-color: #b3b3b3;
+}
+
+.contact .right form .textarea textarea {
+  padding-top: 10px;
+  resize: none;
+}
+
+.contact .right form .button-area {
+  display: flex;
+  align-items: center;
+}
+
+.right form .button-area button {
+  color: #fff;
+  display: block;
+  width: 160px !important;
+  height: 45px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background: crimson;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+
+.right form .button-area button:hover {
+  color: crimson;
+  background: none;
+}
+
+/* Footer section styling */
+
+footer {
+  background: #010812;
+  padding: 15px 23px;
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+footer span a {
+  color: #00d9db;
+  text-decoration: none;
+}
+
+footer span a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive media queries */
+
+@media (max-width: 1104px) {
+  .about .about-content .left img {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+/* 947px ~ 990px */
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+}
+
+/* 690px ~ 946px */
+@media (max-width: 947px) {
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .menu.active {
+    left: 0;
+  }
+
+  .navbar .menu li {
+    display: block;
+  }
+
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+
+  .home .home-content .text-1 {
+    font-size: 20px;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 65px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 25px;
+    width: 100%;
+  }
+
+  .home .home-content .text-3 a {
+    font-size: 25px;
+  }
+
+  .home .home-content a {
+    font-size: 23px;
+    padding: 10px 30px;
+  }
+
+  .max-width {
+    max-width: 930px;
+  }
+
+  .about .about-content .column {
+    width: 100%;
+  }
+
+  .about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+
+  .about .about-content .right {
+    flex: 100%;
+  }
+
+  .skills .skills-content .column,
+  .contact .contact-content .column {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+}
+
+/* 500px ~ 689px */
+@media (max-width: 690px) {
+  .max-width {
+    padding: 0 23px;
+  }
+
+  .home .home-content {
+    text-align: center;
+  }
+
+  .home .home-content .text-1 {
+    font-size: 18px;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 65px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 20px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .home .home-content .text-3 a {
+    font-size: 20px;
+  }
+}
+
+/* 403px ~ 499px */
+@media (max-width: 500px) {
+  .home .home-content {
+    text-align: center;
+  }
+
+  .home .home-content .text-1 {
+    font-size: 18px;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 55px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 20px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .home .home-content .text-3 a {
+    font-size: 20px;
+  }
+
+  .about .about-content .right .text,
+  .skills .skills-content .left .text {
+    font-size: 19px;
+  }
+
+  .contact .right form .fields {
+    flex-direction: column;
+  }
+
+  .contact .right form .name,
+  .contact .right form .email {
+    margin: 0;
+  }
+
+  .right form .error-box {
+    width: 150px;
+  }
+
+  .scroll-up-btn {
+    right: 15px;
+    bottom: 15px;
+    height: 38px;
+    width: 35px;
+    font-size: 23px;
+    line-height: 38px;
+  }
+}
+
+/* 402px and below */
+@media (max-width: 402px) {
+  .home .home-content {
+    text-align: center;
+  }
+
+  .home .home-content .text-1 {
+    font-size: 16px;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 45px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .home .home-content .text-3 a {
+    font-size: 16px;
+  }
+}
