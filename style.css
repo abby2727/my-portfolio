@@ -472,7 +472,6 @@ html {
 
 .contact .contact-content .info .sub-title {
   color: #fff;
-  font-family: 600;
 }
 
 .contact .right form .fields {
@@ -766,5 +765,9 @@ footer span a:hover {
 
   .home .home-content .text-3 a {
     font-size: 16px;
+  }
+
+  .contact .contact-content .row .info {
+    margin-left: 15px;
   }
 }
