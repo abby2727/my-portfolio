@@ -395,13 +395,14 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
+  font-size: 20px;
 }
 
 .project-content .card .img-container a {
   color: #fff;
   text-align: center;
   position: absolute;
-  top: 60%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 20px;
