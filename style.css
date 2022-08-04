@@ -289,13 +289,8 @@ html {
 }
 
 .skills .title {
-  position: relative;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 500;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  font-family: "Ubuntu", sans-serif;
 }
 
 .skills p {
@@ -304,6 +299,7 @@ html {
   margin: 5px 0;
   color: #b1bec8;
   margin-bottom: 40px;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .skill-content {
@@ -353,8 +349,21 @@ html {
 
 /* Projects section styling */
 
+.projects .title {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.projects p {
+  text-align: center;
+  font-size: 23px;
+  margin: 5px 0;
+  margin-bottom: 40px;
+  font-family: "Ubuntu", sans-serif;
+}
+
 .project-content {
-  border: 3px solid #ffff00;
+  /* border: 3px solid #ffff00; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -445,7 +454,7 @@ html {
 }
 
 .project-content .card .project-title h1 {
-  color: white;
+  color: #fff;
   font-size: 23px;
   font-weight: 500;
 }
@@ -875,7 +884,7 @@ footer span a:hover {
   }
 
   .project-content .card .project-title {
-    /* border: 1px solid white; */
+    /* border: 1px solid #fff; */
     padding: 0 5px;
   }
 
