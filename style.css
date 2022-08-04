@@ -84,6 +84,10 @@ html {
   transition: all 0.3s ease;
 }
 
+.navbar .social {
+  display: none;
+}
+
 .navbar.sticky {
   padding: 15px 0;
   background: #010812;
@@ -95,19 +99,11 @@ html {
   justify-content: space-between;
 }
 
-.navbar .logo a {
-  color: #fff;
-  font-size: 35px;
-  font-weight: 600;
-}
-
-.navbar .logo a span {
-  color: crimson;
-  transition: all 0.3s ease;
-}
-
-.navbar.sticky .logo a span {
-  color: #fff;
+.navbar .logo img {
+  width: 75px;
+  height: 75px;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar .menu li {
@@ -125,7 +121,7 @@ html {
 }
 
 .navbar .menu li a:hover {
-  color: crimson;
+  color: #dc143c;
 }
 
 .navbar.sticky .menu li a:hover {
@@ -144,7 +140,7 @@ html {
   position: fixed;
   height: 45px;
   width: 42px;
-  background: crimson;
+  background: #dc143c;
   right: 30px;
   bottom: 10px;
   text-align: center;
@@ -184,6 +180,29 @@ html {
 .home .max-width {
   display: flex;
   width: 100%;
+  justify-content: space-between;
+}
+
+/* .home .max-width .home-content {
+  border: 1px solid #ff0000;
+} */
+
+.home .max-width .social {
+  /* border: 1px solid yellow; */
+  display: flex;
+  flex-direction: column;
+}
+
+.home .max-width .social i {
+  font-size: 35px;
+  color: #fff;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.home .max-width .social i:hover {
+  color: #00d9db;
+  transform: scale(1.20);
 }
 
 .home .home-content .text-1 {
@@ -207,25 +226,25 @@ html {
 
 .home .home-content .text-3 a {
   font-size: 27px;
-  color: crimson;
+  color: #dc143c;
   padding: 0;
 }
 
 .home .home-content .resume a {
   display: inline-block;
-  background: crimson;
+  background: #dc143c;
   color: #fff;
   font-size: 25px;
   padding: 12px 36px;
   margin-top: 20px;
   font-weight: 400;
   border-radius: 6px;
-  border: 2px solid crimson;
+  border: 2px solid #dc143c;
   transition: all 0.3s ease;
 }
 
 .home .home-content .resume a:hover {
-  color: crimson;
+  color: #dc143c;
   background: none;
 }
 
@@ -255,7 +274,7 @@ html {
 }
 
 .about .about-content .right .text span {
-  color: crimson;
+  color: #dc143c;
 }
 
 .about .about-content .right p {
@@ -265,19 +284,19 @@ html {
 
 .about .about-content .right a {
   display: inline-block;
-  background: crimson;
+  background: #dc143c;
   color: #fff;
   font-size: 20px;
   font-weight: 500;
   padding: 10px 30px;
   margin-top: 20px;
   border-radius: 6px;
-  border: 2px solid crimson;
+  border: 2px solid #dc143c;
   transition: all 0.3s ease;
 }
 
 .about .about-content .right a:hover {
-  color: crimson;
+  color: #dc143c;
   background: none;
 }
 
@@ -464,6 +483,11 @@ html {
   font-size: 23px;
   color: #fff;
   margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.project-content .card .project-title i:hover {
+  transform: scale(1.20);
 }
 
 /* Contact section styling */
@@ -574,13 +598,13 @@ html {
   border-radius: 6px;
   cursor: pointer;
   flex-wrap: nowrap;
-  background: crimson;
-  border: 2px solid crimson;
+  background: #dc143c;
+  border: 2px solid #dc143c;
   transition: all 0.3s ease;
 }
 
 .right form .button-area button:hover {
-  color: crimson;
+  color: #dc143c;
   background: none;
 }
 
@@ -626,6 +650,27 @@ footer span a:hover {
     z-index: 999;
   }
 
+  .navbar .social {
+    display: block;
+    /* border: 1px solid #fff; */
+    margin-top: 80px;
+  }
+
+  .home .max-width .social {
+    display: none;
+  }
+
+  .navbar .social i {
+    font-size: 35px;
+    color: #fff;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .social i:hover {
+    transform: scale(1.20);
+  }
+
   .menu-btn i.active:before {
     content: "\f00d";
   }
@@ -636,7 +681,7 @@ footer span a:hover {
     width: 100%;
     left: -100%;
     top: 0;
-    background: #111;
+    background: #010812;
     text-align: center;
     padding-top: 80px;
     transition: all 0.3s ease;
