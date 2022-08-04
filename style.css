@@ -7,22 +7,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
 }
 
 .max-width {
   max-width: 1300px;
   padding: 0 80px;
   margin: auto;
+
+  /* border: 2px solid #ff0000; */
 }
 
 section {
   padding: 90px 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .about,
 .skills,
-.teams,
+.projects,
 .contact {
   font-family: "Poppins", sans-serif;
 }
@@ -177,8 +182,8 @@ html {
 }
 
 .home .max-width {
-  width: 100%;
   display: flex;
+  width: 100%;
 }
 
 .home .home-content .text-1 {
@@ -346,75 +351,109 @@ html {
   transform: scale(1.10);
 }
 
-/* Teams section styling */
+/* Projects section styling */
 
-.teams .carousel .card {
-  background: #222;
-  border-radius: 6px;
-  padding: 25px 35px;
-  text-align: center;
-  overflow: hidden;
-  transition: all 0.3s ease;
+.project-content {
+  border: 3px solid #ffff00;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.teams .carousel .card:hover {
-  background: crimson;
-}
-
-.teams .carousel .card .box {
+.project-content .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  align-items: center;
+  position: relative;
+  width: 500px;
+  height: 400px;
+  background: #0a192f;
+  margin: 10px;
 }
 
-.teams .carousel .card:hover .box {
-  transform: scale(1.05);
+.project-content .card .img-container img {
+  width: 470px;
+  height: 320px;
+  margin-bottom: 10px;
 }
 
-.teams .carousel .card .text {
-  font-size: 25px;
-  font-weight: 500;
-  margin: 10px 0 7px 0;
-}
-
-.teams .carousel .card img {
-  height: 150px;
-  width: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid crimson;
-  transition: all 0.3s ease;
-}
-
-.teams .carousel .card:hover img {
-  border-color: #fff;
-}
-
-.owl-dots {
+.project-content .card p {
+  color: #fff;
   text-align: center;
-  margin-top: 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
 }
 
-.owl-dot {
-  height: 13px;
-  width: 13px;
-  margin: 0 5px;
-  outline: none !important;
-  border-radius: 50%;
-  border: 2px solid crimson !important;
+.project-content .card .img-container a {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  background: #0a192f;
+  padding: 7px 5px;
+  border-radius: 6px;
+  font-family: "Ubuntu", sans-serif;
+  display: none;
+}
+
+.project-content .card .img-container a:hover {
+  background: #010812;
+  font-weight: 500;
+}
+
+.project-content .card .img-container:hover p {
+  display: block;
+}
+
+.project-content .card .img-container:hover a {
+  display: block;
+}
+
+.project-content .card .img-container img {
   transition: all 0.3s ease;
 }
 
-.owl-dot.active {
-  width: 35px;
-  border-radius: 14px;
+.project-content .card .img-container:hover img {
+  transform: scale(1.02);
 }
 
-.owl-dot.active,
-.owl-dot:hover {
-  background: crimson !important;
+.project-content .card .img-container img {
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+
+.project-content .card .img-container:hover img {
+  opacity: 0.3;
+}
+
+/* Projects title */
+.project-content .card .project-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Ubuntu", sans-serif;
+  width: 470px;
+}
+
+.project-content .card .project-title h1 {
+  color: white;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.project-content .card .project-title i {
+  font-size: 23px;
+  color: #fff;
+  margin-left: 10px;
 }
 
 /* Contact section styling */
@@ -681,6 +720,24 @@ footer span a:hover {
   .home .home-content .text-3 a {
     font-size: 20px;
   }
+
+  .project-content .card {
+    width: 430px;
+    height: 350px;
+  }
+
+  .project-content .card .img-container img {
+    width: 400px;
+    height: 270px;
+  }
+
+  .project-content .card .project-title {
+    width: 400px;
+  }
+
+  .project-content .card .img-container a {
+    top: 70%;
+  }
 }
 
 /* 403px ~ 499px */
@@ -733,6 +790,38 @@ footer span a:hover {
     font-size: 23px;
     line-height: 38px;
   }
+
+  .project-content .card {
+    width: 375px;
+    height: 310px;
+  }
+
+  .project-content .card .img-container img {
+    width: 310px;
+    height: 230px;
+  }
+
+  .project-content .card .project-title {
+    width: 310px;
+  }
+
+  .project-content .card p {
+    top: 35%;
+    font-size: 12px;
+  }
+
+  .project-content .card .img-container a {
+    top: 60%;
+    font-size: 15px;
+  }
+
+  .project-content .card .project-title h1 {
+    font-size: 20px;
+  }
+
+  .project-content .card .project-title i {
+    font-size: 20px;
+  }
 }
 
 /* 402px and below */
@@ -772,5 +861,31 @@ footer span a:hover {
     margin-left: 15px;
     padding: 8px 16px;
     margin-top: 15px;
+  }
+
+  .project-content .card {
+    width: 370px;
+    height: 310px;
+    /* background: gray; */
+  }
+
+  .project-content .card .img-container img {
+    width: 300px;
+    height: 230px;
+  }
+
+  .project-content .card .project-title {
+    /* border: 1px solid white; */
+    padding: 0 5px;
+  }
+
+  .project-content .card p {
+    top: 35%;
+    font-size: 12px;
+  }
+
+  .project-content .card .img-container a {
+    top: 62%;
+    font-size: 15px;
   }
 }
