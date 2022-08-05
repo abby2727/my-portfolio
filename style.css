@@ -877,6 +877,15 @@ footer span a:hover {
   .project-content .card .project-title i {
     font-size: 20px;
   }
+
+  .navbar.sticky {
+    padding: 10px 0;
+  }
+
+  .navbar .logo img {
+    width: 65px;
+    height: 65px;
+  }
 }
 
 /* 402px and below */
@@ -942,5 +951,14 @@ footer span a:hover {
   .project-content .card .img-container a {
     top: 62%;
     font-size: 15px;
+  }
+
+  .navbar.sticky {
+    padding: 10px 0;
+  }
+
+  .navbar .logo img {
+    width: 60px;
+    height: 60px;
   }
 }

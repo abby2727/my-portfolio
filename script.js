@@ -41,14 +41,14 @@ $(document).ready(function () {
   btn.addEventListener('click', () => {
     Email.send({
       Host: "smtp.mailtrap.io",
-      Username: "68b04df644f768",
-      Password: "ad906a5936a775",
+      Username: "bae1a512767ead",
+      Password: "e0aae43513c723",
       To: 'abdulpangandaman22@gmail.com',
       From: inputs.elements["email"].value,
-      Subject: "Contact Me",
+      Subject: inputs.elements["subject"].value,
       Body: inputs.elements["message"].value + "<br/>" + inputs.elements["name"].value
     }).then(
-      message => alert("Your message sent successfully. Thank you!")
+      message => alert("Your message sent xxx successfully. Thank you!")
     );
   });
 });
