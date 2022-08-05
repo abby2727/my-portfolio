@@ -33,22 +33,4 @@ $(document).ready(function () {
     $(".navbar .menu").toggleClass("active");
     $(".menu-btn i").toggleClass("active");
   });
-
-  // Contact
-  const btn = document.querySelector('button');
-  const inputs = document.querySelector('form');
-
-  btn.addEventListener('click', () => {
-    Email.send({
-      Host: "smtp.mailtrap.io",
-      Username: "bae1a512767ead",
-      Password: "e0aae43513c723",
-      To: 'abdulpangandaman22@gmail.com',
-      From: inputs.elements["email"].value,
-      Subject: inputs.elements["subject"].value,
-      Body: inputs.elements["message"].value + "<br/>" + inputs.elements["name"].value
-    }).then(
-      message => alert("Your message sent xxx successfully. Thank you!")
-    );
-  });
 });
