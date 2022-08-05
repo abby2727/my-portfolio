@@ -33,4 +33,22 @@ $(document).ready(function () {
     $(".navbar .menu").toggleClass("active");
     $(".menu-btn i").toggleClass("active");
   });
+
+  // Contact
+  const btn = document.querySelector('button');
+  const inputs = document.querySelector('form');
+
+  btn.addEventListener('click', () => {
+    Email.send({
+      Host: "smtp.mailtrap.io",
+      Username: "68b04df644f768",
+      Password: "ad906a5936a775",
+      To: 'abdulpangandaman22@gmail.com',
+      From: inputs.elements["email"].value,
+      Subject: "Contact Me",
+      Body: inputs.elements["message"].value + "<br/>" + inputs.elements["name"].value
+    }).then(
+      message => alert("Your message sent successfully. Thank you!")
+    );
+  });
 });
