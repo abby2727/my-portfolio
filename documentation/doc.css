@@ -1,0 +1,45 @@
+body {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: gray;
+    width: 68em;
+    height: 50em;
+}
+
+.img-container img {
+    width: 68em;
+    height: 50em;
+}
+
+@media (max-width: 768px) {
+    .img-container {
+        width: 45em;
+        height: 30em;
+    }
+
+    .img-container img {
+        width: 45em;
+        height: 30em;
+    }
+}
+
+@media (max-width: 412px) {
+    .img-container {
+        width: 30em;
+        height: 23em;
+    }
+
+    .img-container img {
+        width: 30em;
+        height: 23em;
+    }
+}
