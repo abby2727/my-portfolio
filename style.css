@@ -406,11 +406,32 @@ html {
   margin-bottom: 10px;
 }
 
+
+
+
+
+
+
+
+
+
+
 .project-content .card p {
   color: #fff;
   text-align: center;
   position: absolute;
   top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  font-size: 20px;
+}
+
+.project-content .card .todolist {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
@@ -431,6 +452,50 @@ html {
   font-family: "Ubuntu", sans-serif;
   display: none;
 }
+
+.project-content .card .img-container .truetechsource-link {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  background: #0a192f;
+  padding: 7px 5px;
+  border-radius: 6px;
+  font-family: "Ubuntu", sans-serif;
+  display: none;
+}
+
+.project-content .card .img-container .researchdev-link {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  background: #0a192f;
+  padding: 7px 5px;
+  border-radius: 6px;
+  font-family: "Ubuntu", sans-serif;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .project-content .card .img-container a:hover {
   background: #010812;
@@ -819,6 +884,17 @@ footer span a:hover {
     font-size: 20px;
   }
 
+  .skill-content .card .box i {
+    font-size: 20px;
+  }
+
+  .skill-content .card .box {
+    font-size: 18px;
+    margin-left: 15px;
+    padding: 8px 16px;
+    margin-top: 15px;
+  }
+
   .about .about-content .right .text,
   .skills .skills-content .left .text {
     font-size: 19px;
@@ -865,8 +941,23 @@ footer span a:hover {
     font-size: 12px;
   }
 
+  .project-content .card .todolist {
+    top: 40%;
+    font-size: 12px;
+  }
+
   .project-content .card .img-container a {
-    top: 60%;
+    top: 55%;
+    font-size: 15px;
+  }
+
+  .project-content .card .img-container .truetechsource-link {
+    top: 53%;
+    font-size: 15px;
+  }
+
+  .project-content .card .img-container .researchdev-link {
+    top: 57%;
     font-size: 15px;
   }
 
@@ -948,8 +1039,23 @@ footer span a:hover {
     font-size: 12px;
   }
 
+  .project-content .card .todolist {
+    top: 40%;
+    font-size: 12px;
+  }
+
   .project-content .card .img-container a {
-    top: 62%;
+    top: 56%;
+    font-size: 15px;
+  }
+
+  .project-content .card .img-container .truetechsource-link {
+    top: 54%;
+    font-size: 15px;
+  }
+
+  .project-content .card .img-container .researchdev-link {
+    top: 58%;
     font-size: 15px;
   }
 

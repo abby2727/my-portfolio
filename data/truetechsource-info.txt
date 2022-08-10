@@ -1,0 +1,4 @@
+TrueTechSource Admin Credentials:
+
+email: admin@mailinator.com
+password: password
