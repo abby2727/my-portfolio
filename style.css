@@ -89,7 +89,7 @@ html {
 }
 
 .navbar.sticky {
-  padding: 15px 0;
+  padding: 12px 0;
   background: #010812;
 }
 
@@ -280,6 +280,10 @@ html {
 .about .about-content .right p {
   text-align: justify;
   font-size: 17px;
+}
+
+.about .about-content .main-goal{
+  margin-top: 10px;
 }
 
 .about .about-content .right a {
