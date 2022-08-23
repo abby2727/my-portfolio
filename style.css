@@ -282,8 +282,8 @@ html {
   font-size: 17px;
 }
 
-.about .about-content .main-goal{
-  margin-top: 10px;
+.about .about-content .margin-top {
+  margin-top: 12px;
 }
 
 .about .about-content .right a {
