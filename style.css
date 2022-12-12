@@ -336,6 +336,11 @@ html {
   color: #00d9db;
 }
 
+.skill-content .card .box img {
+  font-size: 28px;
+  color: #00d9db;
+}
+
 .skill-content .card .box span {
   color: #b1bec8;
 }
