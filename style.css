@@ -1,7 +1,4 @@
-/* Google fonts (Poppins && Ubuntu) */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
-
-/* Universal styling */
 
 * {
   margin: 0;
@@ -13,8 +10,6 @@
   max-width: 1300px;
   padding: 0 80px;
   margin: auto;
-
-  /* border: 2px solid #ff0000; */
 }
 
 section {
@@ -129,6 +124,7 @@ html {
 }
 
 /* Menu button styling */
+
 .menu-btn {
   color: #fff;
   font-size: 23px;
@@ -188,7 +184,6 @@ html {
 } */
 
 .home .max-width .social {
-  /* border: 1px solid yellow; */
   display: flex;
   flex-direction: column;
 }
@@ -691,13 +686,23 @@ footer {
   font-family: "Poppins", sans-serif;
 }
 
-footer span a {
-  color: #00d9db;
-  text-decoration: none;
+footer .fa-heart {
+  transition: all 0.3s ease;
 }
 
-footer span a:hover {
-  text-decoration: underline;
+footer span:hover .fa-heart {
+  color: red;
+  transform: scale(1.2);
+}
+
+footer a {
+  color: #00d9db;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
 }
 
 /* Responsive media queries */
