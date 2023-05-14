@@ -179,10 +179,6 @@ html {
   justify-content: space-between;
 }
 
-/* .home .max-width .home-content {
-  border: 1px solid #ff0000;
-} */
-
 .home .max-width .social {
   display: flex;
   flex-direction: column;
@@ -386,7 +382,6 @@ html {
 }
 
 .project-content {
-  /* border: 3px solid #ffff00; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -420,17 +415,6 @@ html {
   display: none;
   font-size: 20px;
 }
-
-/* .project-content .card h5 {
-  color: #fff;
-  text-align: center;
-  position: absolute;
-  top: 97%;
-  left: 12%;
-  transform: translate(-50%, -50%);
-  font-size: 11px;
-  font-family: "Ubuntu", sans-serif;
-} */
 
 .project-content .card .todolist {
   color: #fff;
