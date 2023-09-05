@@ -1,28 +1,53 @@
-$(document).ready(function () {
-  $(window).scroll(function () {
-    if (this.scrollY > 20)
-      $(".navbar").addClass("sticky");
-    else
-      $(".navbar").removeClass("sticky");
+const navbar = document.querySelector('.navbar');
+const scrollUpButton = document.querySelector('.scroll-up-btn');
 
-    if (this.scrollY > 500)
-      $(".scroll-up-btn").addClass("show");
-    else
-      $(".scroll-up-btn").removeClass("show");
-  });
+window.addEventListener('scroll', function () {
+	if (window.scrollY > 50) {
+		navbar.classList.add('sticky');
+	} else {
+		navbar.classList.remove('sticky');
+	}
 
-  $(".scroll-up-btn").click(function () {
-    $("html").animate({ scrollTop: 0 });
-    $("html").css("scrollBehavior", "auto");
-  });
+	if (this.window.scrollY > 500) {
+		scrollUpButton.classList.add('show');
+	} else {
+		scrollUpButton.classList.remove('show');
+	}
+});
 
-  $(".navbar .menu li a").click(function () {
-    $("html").css("scrollBehavior", "smooth");
-  });
+const scrollUpBtns = document.querySelectorAll('.scroll-up-btn');
+const menuBtns = document.querySelectorAll('.menu-btn');
+const socialElements = document.querySelectorAll('.navbar .social');
+const menuElements = document.querySelectorAll('.navbar .menu');
+const menuIcon = document.querySelectorAll('.menu-btn i');
 
-  $(".menu-btn").click(function () {
-    $(".navbar .social").toggleClass("active");
-    $(".navbar .menu").toggleClass("active");
-    $(".menu-btn i").toggleClass("active");
-  });
+scrollUpBtns.forEach((scrollUpBtn) => {
+	scrollUpBtn.addEventListener('click', function () {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+
+		document.documentElement.style.scrollBehavior = 'auto';
+
+		setTimeout(() => {
+			document.documentElement.style.scrollBehavior = 'smooth';
+		}, 100);
+	});
+});
+
+menuBtns.forEach((menuBtn) => {
+	menuBtn.addEventListener('click', function () {
+		socialElements.forEach((element) => {
+			element.classList.toggle('active');
+		});
+
+		menuElements.forEach((element) => {
+			element.classList.toggle('active');
+		});
+
+		menuIcon.forEach((icon) => {
+			icon.classList.toggle('active');
+		});
+	});
 });
