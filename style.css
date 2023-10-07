@@ -689,6 +689,16 @@ footer a:hover {
 	color: #fff;
 }
 
+/* Hover image to blur */
+.blurImage img {
+	transition: 0.8s ease;
+}
+
+.blurImage img:hover {
+	-webkit-filter: blur(3px);
+	transition: 0.8s ease;
+}
+
 /* Responsive media queries */
 
 @media (max-width: 1104px) {
