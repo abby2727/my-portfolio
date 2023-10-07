@@ -670,22 +670,43 @@ footer {
 	font-family: 'Poppins', sans-serif;
 }
 
+/* heart span */
 footer .fa-heart {
-	transition: all 0.3s ease;
+	transition: all 0.4s ease;
 }
 
-footer span:hover .fa-heart {
+footer .heart-span:hover .fa-heart {
 	color: red;
-	transform: scale(1.2);
+	transform: scale(1.3);
 }
 
-footer a {
+footer .heart-span a {
 	color: #00d9db;
 	text-decoration: none;
 	transition: all 0.3s ease;
 }
 
-footer a:hover {
+footer .heart-span a:hover {
+	color: #fff;
+}
+
+/* coffee span */
+footer .fa-mug-saucer {
+	transition: all 0.4s ease;
+}
+
+footer .coffee-span:hover .fa-mug-saucer {
+	transform: scale(1.3);
+	color: #00d9db;
+}
+
+footer .coffee-span a {
+	color: red;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+footer .coffee-span a:hover {
 	color: #fff;
 }
 
