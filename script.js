@@ -51,3 +51,30 @@ menuBtns.forEach((menuBtn) => {
 		});
 	});
 });
+
+// * Random Quote Generator
+// * Powered by Quotable
+
+document.addEventListener('DOMContentLoaded', () => {
+	const quote = document.querySelector('blockquote p');
+	const cite = document.querySelector('blockquote cite');
+
+	const updateQuote = async () => {
+		try {
+			const response = await fetch('https://api.quotable.io/random');
+			const data = await response.json();
+
+			if (response.ok) {
+				quote.textContent = data.content;
+				cite.textContent = data.author;
+			} else {
+				quote.textContent = 'An error occured';
+			}
+		} catch (error) {
+			console.error(error);
+		}
+	};
+
+	// Call updateQuote function once when page loads
+	updateQuote();
+});

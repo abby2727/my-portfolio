@@ -711,6 +711,7 @@ footer .coffee-span a:hover {
 }
 
 /* Hover image to blur */
+
 .blurImage .image-container {
 	position: relative;
 	transition: 0.8s ease;
@@ -743,6 +744,8 @@ footer .coffee-span a:hover {
 .blurImage .image-container:hover .image-text {
 	opacity: 1;
 }
+
+/* Random Quote Styling */
 
 /* Responsive media queries */
 
