@@ -701,13 +701,13 @@ footer .coffee-span:hover .fa-mug-saucer {
 }
 
 footer .coffee-span a {
-	color: red;
+	color: #fff;
 	text-decoration: none;
 	transition: all 0.3s ease;
 }
 
 footer .coffee-span a:hover {
-	color: #fff;
+	color: red;
 }
 
 /* Hover image to blur */
