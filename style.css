@@ -746,6 +746,14 @@ footer .coffee-span a:hover {
 }
 
 /* Random Quote Styling */
+.quote-container {
+	width: 50%;
+	text-align: left;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 
 /* Responsive media queries */
 
