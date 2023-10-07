@@ -690,13 +690,37 @@ footer a:hover {
 }
 
 /* Hover image to blur */
-.blurImage img {
+.blurImage .image-container {
+	position: relative;
 	transition: 0.8s ease;
 }
 
-.blurImage img:hover {
-	-webkit-filter: blur(3px);
+.blurImage img {
+	width: 100%;
+	height: auto;
+}
+
+.blurImage .image-text {
+	position: absolute;
+	top: 40%;
+	left: 60%;
+	transform: translate(-60%, -40%);
+	opacity: 0;
+	transition: opacity 1s ease;
+	color: #fff;
+	pointer-events: none;
+	transition-delay: 0.3s;
+	text-align: center;
+	font-weight: 600;
+}
+
+.blurImage .image-container:hover img {
+	filter: blur(3px);
 	transition: 0.8s ease;
+}
+
+.blurImage .image-container:hover .image-text {
+	opacity: 1;
 }
 
 /* Responsive media queries */
