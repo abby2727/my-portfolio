@@ -221,7 +221,13 @@ html {
 	padding: 0;
 }
 
-.home .home-content .resume a {
+.home .home-content .text-4 a {
+	font-size: 18px;
+	margin-left: 16px;
+	color: #dc143c;
+}
+
+.home .home-content .resume .resume-anchor a {
 	display: inline-block;
 	background: #dc143c;
 	color: #fff;
@@ -234,7 +240,7 @@ html {
 	transition: all 0.3s ease;
 }
 
-.home .home-content .resume a:hover {
+.home .home-content .resume .resume-anchor a:hover {
 	color: #dc143c;
 	background: none;
 }
@@ -676,7 +682,7 @@ footer .fa-heart {
 }
 
 footer .heart-span:hover .fa-heart {
-	color: red;
+	color: #dc143c;
 	transform: scale(1.3);
 }
 
@@ -707,7 +713,7 @@ footer .coffee-span a {
 }
 
 footer .coffee-span a:hover {
-	color: red;
+	color: #dc143c;
 }
 
 /* Hover image to blur */
@@ -920,6 +926,18 @@ footer .coffee-span a:hover {
 
 	.project-content .card .img-container a {
 		top: 70%;
+	}
+
+	.home .home-content .resume {
+		/* border: 1px solid red; */
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.home .home-content .text-4 {
+		font-size: 16px;
+		margin-top: 16px;
 	}
 }
 
