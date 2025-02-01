@@ -52,9 +52,7 @@ menuBtns.forEach((menuBtn) => {
 	});
 });
 
-// * Random Quote Generator
-// * Powered by Quotable
-
+// Random Quote Generator (Powered by Quotable)
 document.addEventListener('DOMContentLoaded', () => {
 	const quote = document.querySelector('blockquote p');
 	const cite = document.querySelector('blockquote cite');

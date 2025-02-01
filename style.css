@@ -182,6 +182,7 @@ html {
 .home .max-width .social {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 }
 
 .home .max-width .social i {
