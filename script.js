@@ -52,27 +52,77 @@ menuBtns.forEach((menuBtn) => {
 	});
 });
 
-// Random Quote Generator (Powered by Quotable)
+// Random Quote Generator (Powered by API-Ninjas)
 document.addEventListener('DOMContentLoaded', () => {
 	const quote = document.querySelector('blockquote p');
 	const cite = document.querySelector('blockquote cite');
 
 	const updateQuote = async () => {
 		try {
-			const response = await fetch('https://api.quotable.io/random');
-			const data = await response.json();
+			const response = await fetch(CONFIG.QUOTES_API_URL, {
+				method: 'GET',
+				headers: {
+					'X-Api-Key': CONFIG.API_NINJAS_API_KEY,
+					'Content-Type': 'application/json'
+				}
+			});
 
 			if (response.ok) {
-				quote.textContent = data.content;
-				cite.textContent = data.author;
+				const data = await response.json();
+
+				// API-Ninjas returns an array of quotes, we'll take the first one
+				if (data && data.length > 0) {
+					quote.textContent = data[0].quote;
+					cite.textContent = data[0].author;
+				} else {
+					quote.textContent = 'No quotes available at the moment';
+					cite.textContent = '';
+				}
 			} else {
-				quote.textContent = 'An error occured';
+				const errorText = await response.text();
+				console.error('API Error:', response.status, errorText);
+
+				// Handle specific API errors with friendly messages
+				if (response.status === 429) {
+					// Rate limit exceeded (quota reached)
+					quote.textContent =
+						"📊 Oops! We've reached our monthly quote limit. Please try again next month or contact the admin for more quotes!";
+					cite.textContent = 'API Quota Reached';
+				} else if (response.status === 402) {
+					quote.textContent =
+						"💳 Our quote service quota has been exceeded this month. Don't worry, we'll be back with fresh quotes soon!";
+					cite.textContent = 'Service Temporarily Limited';
+				} else if (response.status === 401 || response.status === 403) {
+					quote.textContent =
+						"🔑 There seems to be an authentication issue. We're working on it!";
+					cite.textContent = 'Service Issue';
+				} else if (response.status >= 500) {
+					quote.textContent =
+						'⚡ The quote service is temporarily down. Please try again in a few moments!';
+					cite.textContent = 'Service Maintenance';
+				} else {
+					// Generic error
+					quote.textContent =
+						'😔 Unable to fetch a quote right now. Please try again later!';
+					cite.textContent = 'Temporary Issue';
+				}
 			}
 		} catch (error) {
-			console.error(error);
+			console.error('Network Error:', error);
+			quote.textContent =
+				"🌐 Oops! Looks like there's a connection issue. Please check your internet and try again!";
+			cite.textContent = 'Connection Problem';
 		}
 	};
 
-	// Call updateQuote function once when page loads
 	updateQuote();
+
+	// const refreshButton = document.getElementById('refresh-quote');
+	// if (refreshButton) {
+	// 	refreshButton.addEventListener('click', () => {
+	// 		quote.textContent = 'Loading...';
+	// 		cite.textContent = '';
+	// 		updateQuote();
+	// 	});
+	// }
 });
