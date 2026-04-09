@@ -13,8 +13,8 @@
   <br /><br />
   To view my latest portfolio, please visit:
   <br />
-  <a href="https://abdulpangandaman-legacy.vercel.app/" target="_blank">
-    abdulpangandaman-legacy.vercel.app
+  <a href="https://abdulpangandaman.vercel.app/" target="_blank">
+    abdulpangandaman.vercel.app
   </a>
   <br /><br />
   The source code for my newer portfolio is currently not open source.
